@@ -3,8 +3,8 @@
 #include <cstdlib>
 #include <cstring>
 #include <cstdio>
-#define SPACE_WIDTH 100
-#define SPACE_HEIGHT 100
+#define SPACE_WIDTH 1000
+#define SPACE_HEIGHT 1000
 using namespace std;
 
 char code[SPACE_WIDTH][SPACE_HEIGHT] ={0};
