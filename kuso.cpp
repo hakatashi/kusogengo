@@ -13,6 +13,7 @@ int N;
 int width,height;
 const int dx[8] ={};
 const int dy[8] ={};
+bool if_DEBUG = false;
 int get_input(){
 	int c;
 	if((c=getchar())== EOF)
@@ -203,7 +204,8 @@ int run(){
 	}
 	bool if_valid = true;
 	while(if_valid){
-//		print_now_map();
+		if(if_DEBUG)
+			print_now_map();
 		for(int i = 0; i <36; i++){
 			if(!ps[i].valid){
 				continue;
@@ -338,7 +340,13 @@ int main(int argc, char *argv[]){
     int i;
 	int error = 0;
     char *path = NULL;
-	path = argv[1];
+	if(argc == 3){
+		if(!strcmp(argv[1], "-d"))
+			if_DEBUG = true;
+		path = argv[2];
+	}else{
+		path = argv[1];
+	}
 	init_code();
     fp = fopen(path, "r");
     error = input(fp);
