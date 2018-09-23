@@ -90,7 +90,7 @@ public:
 				dy = 0;
 			}else if(dy ==  1){
 				dx = 0;
-				dy = 1;
+				dy =-1;
 			}
 		}else if(dx == -1){
 			if (dy == 0){
