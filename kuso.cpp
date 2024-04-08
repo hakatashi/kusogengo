@@ -164,6 +164,7 @@ int input(FILE *fp) {
 		cout << "Need more than 1 player" << endl;
 		return -1;
 	}
+	return 0;
 }
 
 void print_code(){
@@ -332,6 +333,7 @@ int run(){
 			
 		}
 	}
+	return 0;
 }
 
 
